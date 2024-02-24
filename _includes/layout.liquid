@@ -12,10 +12,11 @@ title: 11ty Boilerplate
   <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
-<div x-data="{ open: false, names: ['Ally', 'Emily', 'Alissa', 'Romina', 'Carson', 'Ben', 'Neth', 'Tate', 'Dom', 'Oliver'], RandomName: '' }">
-  <button @click="open = true; RandomName = names[Math.floor(Math.random() * names.length)]">Generate Random Name</button>
+<div class="data" x-data="{ open: false, names: ['Ally', 'Emily', 'Alissa', 'Romina', 'Carson', 'Ben', 'Neth', 'Tate', 'Dom', 'Oliver'], RandomName: '' }">
+  <h2 class="instruction">Click the button below to display a random name from a list of 10</h2>
+  <button  class="button" @click="open = true; RandomName = names[Math.floor(Math.random() * names.length)]">Generate Random Name</button>
  
-  <h1 x-show="open" x-text="RandomName"></h1>
+  <h1 class="random-name" x-show="open" x-text="RandomName"></h1>
 </div>  
   {{ content }}
 </body>
